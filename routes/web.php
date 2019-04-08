@@ -17,3 +17,5 @@ Route::get('/', function () {
     $users = User::all();
     return view('users', ['users'=>$users]);
 });
+Route::get('user_notes/{id}', 'UserNotesController@index');
+Route::post('save_usernote', 'UserNotesController@store');
